@@ -8,6 +8,7 @@ const ScreenHeaderBtn = ({ iconUrl, dimension, handlePress }) => {
     <TouchableOpacity>
       <Image
         source={iconUrl} 
+        resizeMode="cover"
       />
     </TouchableOpacity>
   )
