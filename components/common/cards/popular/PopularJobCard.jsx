@@ -1,7 +1,6 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-
-import styles from './popularjobcard.style'
+import styles from './popularjobcard.style';
 
 const PopularJobCard = () => {
   return (
@@ -11,4 +10,4 @@ const PopularJobCard = () => {
   )
 }
 
-export default PopularJobCard
+export default PopularJobCard;
