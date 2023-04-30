@@ -7,6 +7,7 @@ import styles from './popularjobs.style';
 import { COLORS, SIZES } from '../../../constants';
 import PopularJobCard from "../../common/cards/popular/PopularJobCard";
 import useFetch from '../../../hook/useFetch';
+import { Route } from 'expo-router/build/Route';
 
 const Popularjobs = () => {
   const router = useRouter();
@@ -19,7 +20,8 @@ const Popularjobs = () => {
   const [selectedJob, setSelectedJob] = useState()
 
   const handleCardPress = (item) => {
-
+    route.push(`/job-details/${item.job_id}`);
+    setSelectedJob(item.job_id)
   }
 
   return (
