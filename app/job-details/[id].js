@@ -30,6 +30,8 @@ const JobDetails = () => {
     job_id: params.id,
   });
 
+  console.log('error:', error)
+
   const [refreshing, setRefreshing] = useState(false);
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
@@ -50,10 +52,10 @@ const JobDetails = () => {
             return <JobAbout
                 info={data[0].job_description ?? "No data provided"}
             />
-        case "Responsibilties":
+        case "Responsibilities":
             return <Specifics
-            title="Responsibilties"
-            points={data[0].job_highlights?.Responsibilties ?? ['N/A']}
+            title="Responsibilities"
+            points={data[0].job_highlights?.Responsibilities ?? ['N/A']}
         />
     
         default:
